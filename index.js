@@ -25,12 +25,12 @@ function rhymes(value) {
 
   words.forEach(check)
 
-  return results.sort(sort).slice(0, 20)
+  return results.sort(sort)
 
   function check(other) {
     var score = countMatchingTrailingSyllables(pron, other.pron)
 
-    if (score > 1) {
+    if (score > 0) {
       results.push({
         score: score,
         pron: other.pron,
